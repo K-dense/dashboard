@@ -1,30 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: 'Dosis', sans-serif;
 }
 
 body {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 300px 1fr;
 }
 
 .sidebar {
   height: 100vh;
-  border: 1px solid red;
+  color: #e0f2fe;
+  background-color: #0c4a6e;
 }
 
 .sidebar-title {
   display: flex;
   align-items: center;
-  border: 1px solid blue;
+  padding: 15px;
+  gap: 10px;
+  font-size: 2rem;
+}
+
+.sidebar-title > svg {
+  width: 50px;
+  height: 50px;
 }
 
 .sidebar-title > span {
-  text-transform: uppercase;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
-.sidebar-menu-1 > ul > li {
+.sidebar-menues {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  justify-content: space-between;
+}
+
+.sidebar-menu-1 > ul > li,
+.sidebar-menu-2 > ul > li
+{
   display: flex;
   align-items: center;
+  gap: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 5px 0 5px 25px;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu-1 > ul > li:hover,
+.sidebar-menu-2 > ul > li:hover {
+  color: #0369a1;
+  background-color: #dbeafe;
+}
+
+.sidebar-menu-1 > ul > li > svg,
+.sidebar-menu-2 > ul > li > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sidebar-menu-2 {
+  align-items: flex-end;
 }
