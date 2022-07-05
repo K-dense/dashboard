@@ -36,6 +36,10 @@ body {
   text-transform: capitalize;
 }
 
+.close-btn-container {
+  display: none;
+}
+
 .sidebar-menues {
   display: flex;
   flex-direction: column;
@@ -71,4 +75,68 @@ body {
 
 .sidebar-menu-2 {
   align-items: flex-end;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.hamburger-menu > div {
+  border: 2px solid #0c4a6e;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .sidebar-title {
+    font-size: 25px;
+  }
+
+  .sidebar-menu-1 > ul > li,
+  .sidebar-menu-2 > ul > li
+{
+  font-size: 20px;
+}
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+    position: absolute;
+  }
+
+  .sidebar-title {
+    padding: 0 15px 15px 15px;
+  }
+
+  .close-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 5px 0 0;
+  }
+
+  .close-btn {
+    width: 30px;
+    height: 30px;
+    color: #0ea5e9;
+    cursor: pointer;
+  }
+
+  .open {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
 }
