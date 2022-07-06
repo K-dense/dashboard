@@ -82,11 +82,39 @@ body {
   flex-direction: column;
   gap: 6px;
   width: 28px;
+  padding-top: 24px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
 .hamburger-menu > div {
   border: 2px solid #0c4a6e;
+}
+
+.search-and-profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 0 20px;
+  border: 1px solid red;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid blue;
+}
+
+.search > input {
+  width: 70%;
+  margin-left: 15px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  border: 1px solid green;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -138,7 +166,7 @@ body {
 
   .open {
     display: block;
-    width: 55vw;
+    width: 40vw;
   }
 
   .close {
