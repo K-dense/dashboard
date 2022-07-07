@@ -189,6 +189,11 @@ label > svg {
   color: #dbeafe;
 }
 
+.user-pic-and-username {
+  display: flex;
+  align-items: center;
+}
+
 .user-pic-container {
   display: flex;
   justify-content: center;
@@ -205,13 +210,53 @@ label > svg {
   max-height: 100%;
 }
 
-@media only screen and (max-width: 1000px) {
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.user-username-tag {
+  border: 1px solid green;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-container > button {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0369a1;
+  border: 2px solid #0369a1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.button-container > button:hover {
+  background-color: #0369a1;
+  color: white;
+  border-color: white;
+}
+
+@media only screen and (max-width: 1300px) {
   body {
     grid-template-columns: 250px 1fr;
   }
 
   .sidebar-title {
     font-size: 25px;
+  }
+
+  .sidebar-menues {
+    height: 60vh;
   }
 
   .sidebar-menu-1 > ul > li,
@@ -221,9 +266,9 @@ label > svg {
 }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1080px) {
   body {
-    grid-template-columns: 50px 1fr;
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
@@ -263,8 +308,51 @@ label > svg {
 
   .hamburger-menu {
     display: flex;
+    position: absolute;
+  }
+
+  .search {
+    margin-left: 40px;
   }
 }
+
+@media only screen and (max-width: 590px) {
+  .sidebar {
+    width: 70%;
+  }
+
+  .sidebar-menu-1 > ul > li,
+  .sidebar-menu-2 > ul > li
+{
+  font-size: 20px;
+}
+
+.header-container {
+  padding-left: 0;
+  gap: 0;
+}
+
+.search-and-profile {
+  grid-template-columns: 1fr;
+  gap: 30px;
+  padding: 20px 20px 0 20px
+}
+
+.profile {
+  padding-right: 0;
+  justify-content: center;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+}
+
+.user-pic-and-username {
+    display: none;
+}
+}
+
 
 @keyframes ring-the-bell {
   0%,
