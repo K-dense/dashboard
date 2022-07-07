@@ -93,9 +93,12 @@ body {
 }
 
 .header-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
   background-color: white;
   box-shadow: 1px 6px 5px #888888;
-
+  padding-left: 50px;
 }
 
 .search-and-profile {
@@ -103,7 +106,6 @@ body {
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  padding: 20px 0 0 20px;
 }
 
 label > svg {
@@ -118,15 +120,15 @@ label > svg {
 }
 
 .search > input {
-  width: 70%;
+  width: 100%;
   margin-left: 5px;
   border: transparent;
-  border-radius: 14px;
+  border-radius: 19px;
   background-color: #e0f2fe;
   font-size: 18px;
   transition: box-shadow 0.2s ease-in-out;
   outline: none;
-  padding: 8px 0 8px 10px;
+  padding: 7px 0 7px 10px;
 }
 
 .search > input:focus {
@@ -134,14 +136,73 @@ label > svg {
 }
 
 .profile {
-  display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 5vw;
 }
 
 .profile > svg {
   width: 30px;
   height: 30px;
+  margin-right: 5vw;
   color:#0c4a6e;
+  cursor: pointer;
+
+  transition: color 0.2s ease-in-out;
+}
+
+.profile > svg:hover {
+  color: #0369a1;
+  animation: ring-the-bell 0.8s both;
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.profile-pic-container > img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.username {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #0369a1;
+  cursor: pointer;
+  padding: 20px;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.username:hover {
+  background-color: #0c4a6e;
+  color: #dbeafe;
+}
+
+.user-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 90px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.user-pic-container > img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -202,5 +263,28 @@ label > svg {
 
   .hamburger-menu {
     display: flex;
+  }
+}
+
+@keyframes ring-the-bell {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-10px) rotate(4deg);
+  }
+  30% {
+    transform: translateX(4px) rotate(-4deg);
+  }
+  45% {
+    transform: translateX(-4px) rotate(3.6deg);
+  }
+  60% {
+    transform: translateX(2px) rotate(-2.4deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(1.2deg);
   }
 }
