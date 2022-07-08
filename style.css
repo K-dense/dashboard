@@ -14,6 +14,8 @@ body {
 }
 
 .sidebar {
+  position: sticky;
+  top: 0;
   height: 100vh;
   color: #e0f2fe;
   background-color: #0c4a6e;
@@ -95,7 +97,6 @@ body {
 .header-container {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 20px;
   background-color: white;
   box-shadow: 1px 6px 5px #888888;
   padding-left: 50px;
@@ -189,9 +190,18 @@ label > svg {
   color: #dbeafe;
 }
 
+.user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
 .user-pic-and-username {
   display: flex;
   align-items: center;
+  color: #0c4a6e;
+  gap: 20px;
 }
 
 .user-pic-container {
@@ -200,7 +210,6 @@ label > svg {
   align-items: center;
   height: 90px;
   width: 90px;
-  margin-right: 5px;
   overflow: hidden;
   border-radius: 50px;
 }
@@ -210,14 +219,17 @@ label > svg {
   max-height: 100%;
 }
 
-.user {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+.user-username-tag {
+  font-weight: 500;
 }
 
-.user-username-tag {
-  border: 1px solid green;
+.user-username-tag > div:nth-child(1) {
+  font-size: 15px;
+}
+
+.user-username-tag > div:nth-child(2) {
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
 .button-container {
@@ -244,6 +256,53 @@ label > svg {
   background-color: #0369a1;
   color: white;
   border-color: white;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'projects announcements'
+    'projects trending';
+  border: 1px solid fuchsia;
+}
+
+.projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+.projects-content {
+  display: grid;
+  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 350px 350px 350px;
+}
+
+.projects-content > div {
+  border: 1px solid red;
+}
+
+.announcements {
+  grid-area: announcements;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcements-content > div {
+  border: 1px solid blue;
+}
+
+.trending {
+  grid-area: trending;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-content {
+  border: 1px solid green;
 }
 
 @media only screen and (max-width: 1300px) {
