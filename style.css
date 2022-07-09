@@ -13,6 +13,23 @@ body {
   background-color: #e0f2fe;
 }
 
+a {
+  text-decoration: none;
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+a:link {
+  color: #0284c7;
+}
+
+a:visited {
+  color: #0284c7;
+}
+
+a:hover {
+  text-shadow: 2px 5px #bae6fd;
+}
+
 .sidebar {
   position: sticky;
   top: 0;
@@ -277,8 +294,10 @@ label > svg {
 
 .projects-content {
   display: grid;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 30px;
 }
 
 .projects-content > div {
