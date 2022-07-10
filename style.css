@@ -295,13 +295,26 @@ label > svg {
 .projects-content {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, 240px);
   justify-content: center;
   gap: 30px;
 }
 
 .projects-content > div {
   border: 1px solid red;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .announcements {
