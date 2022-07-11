@@ -18,15 +18,15 @@ a {
   transition: text-shadow 0.2s ease-in-out;
 }
 
-a:link {
+.tag > a:link {
   color: #0284c7;
 }
 
-a:visited {
+.tag > a:visited {
   color: #0284c7;
 }
 
-a:hover {
+.tag > a:hover {
   text-shadow: 2px 5px #bae6fd;
 }
 
@@ -292,6 +292,13 @@ label > svg {
   border: 1px solid red;
 }
 
+.section-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #075985;
+  padding: 20px 0 20px 10px;
+}
+
 .projects-content {
   display: grid;
   grid-template-rows: auto;
@@ -300,21 +307,64 @@ label > svg {
   gap: 30px;
 }
 
-.projects-content > div {
-  border: 1px solid red;
-}
-
 .project {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  padding: 20px;
   background-color: white;
+  border-left: 6px solid #0284c7;
+  cursor: pointer;
+
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.project:hover {
+  box-shadow: -5px 6px 3px #888888;
+}
+
+.project > a {
+  color: black;
+  height: 100%;
 }
 
 .project-title {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+  color: #0369a1;
+}
+
+.project-description {
+  font-weight: 200;
+  padding: 10px;
+  line-height: 23px;
+  height: 100%;
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  gap: 10px;
+}
+
+.project-buttons > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.project-button > svg {
+  width: 24px;
+  height: 24px;
+  color: #0369a1;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.project-button > svg:hover {
+  color: #93c5fd;
 }
 
 .announcements {
