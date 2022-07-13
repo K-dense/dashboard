@@ -334,10 +334,11 @@ label > svg {
 }
 
 .project-description {
-  font-weight: 200;
+  font-weight: 400;
   padding: 10px;
   line-height: 23px;
   height: 100%;
+  color: #5b5f61;
 }
 
 .project-buttons {
@@ -390,6 +391,7 @@ font-size: 17px;
   border: 2px solid #0369A1;
   border-radius: 20px;
   background-color: white;
+  color: #5b5f61;
 }
 
 .announcements-content > div:nth-child(1)::after,
@@ -409,7 +411,59 @@ font-size: 17px;
 }
 
 .trending-content {
-  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+  width: 350px;
+  padding: 25px;
+  margin-left: 20px;
+  border: 2px solid #0369A1;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.trending-profile {
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.trending-profile:hover {
+  background-color: rgba(186, 230, 253, .5);
+}
+
+.trending-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trending-profile-container > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.trending-user {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trending-user > div:nth-child(1) {
+  font-weight: 500;
+  color: #0369A1;
+}
+
+.trending-user > div:nth-child(2) {
+  font-weight: 400;
+  color: #5b5f61;
 }
 
 @media only screen and (max-width: 1300px) {
